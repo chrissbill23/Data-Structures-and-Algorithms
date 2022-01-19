@@ -1,8 +1,8 @@
 # HEAP module:Heap (Base abstract class); Minheap and Maxheap concrete classes
 class Heap :
-    def __init__(self, nodes: list):
-        self.size = len(nodes)
-        self.__values = nodes
+    def __init__(self):
+        self.size = 0
+        self.__values = []
         self.heapifyDown(0)
     def getNodes(self):
         return self.__values
@@ -62,20 +62,20 @@ class Heap :
         return self.removeNode(self.size-1)
     def  peek(self):
         return self.removeNode(0)
-    def ___printHelper(self, currind):
+    def __printHelper(self, currind):
         if currind >= self.size or currind < 0:
             return ''
         sL = ''
         sR = ''
         if self.hasLeftChild(currind):
-            sL = self.___printHelper(self.leftChild(currind))
+            sL = self.__printHelper(self.leftChild(currind))
         if self.hasRightChild(currind):
-            sR = self.___printHelper(self.rightChild(currind))
+            sR = self.__printHelper(self.rightChild(currind))
         return str(self.__values[currind])+'-->('+sL+','+sR+')'
-    def __repr__(self):
-        return self.___printHelper(0)
     def __str__(self):
-        return self.__repr__()
+        return self.__printHelper(0) 
+    def __repr__(self):
+        return self.__str__()
 
 class MinHeap(Heap):
     def compare(self, mainindex, otherindex):
@@ -87,27 +87,21 @@ class MaxHeap(Heap):
         return nodes[mainindex] > nodes[otherindex]
     
             
-'''        
-obj = MinHeap([10])
-obj.addNode(15); obj.addNode(20); obj.addNode(17); obj.addNode(25); obj.addNode(5)
-#obj.peek()
-#obj.removeNode(1)
-print (obj)
-print (obj.getNodes())
-
-obj = MaxHeap([10])
-obj.addNode(15); obj.addNode(20); obj.addNode(17); obj.addNode(25); obj.addNode(5)
-#obj.peek()
-#obj.removeNode(1)
-print (obj)
-print (obj.getNodes())
-'''
-
-
-
-
-
-
-
-
-
+'''if __name__ == "__main__":
+    
+    obj = MinHeap()
+    obj.addNode(10); obj.addNode(15); obj.addNode(20); obj.addNode(17); obj.addNode(25); obj.addNode(5)
+    #obj.peek()
+    #obj.removeNode(1)
+    print (obj)
+    print (obj.getNodes())
+    
+    obj = MaxHeap()
+    obj.addNode(10); obj.addNode(15); obj.addNode(20); obj.addNode(17); obj.addNode(25); obj.addNode(5)
+    #obj.peek()
+    #obj.removeNode(1)
+    print (obj)
+    print (obj.getNodes())
+ '''
+            
+    
