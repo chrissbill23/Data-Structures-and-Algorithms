@@ -2,9 +2,9 @@
 My implementations in Python of some Data Structures and Algorithms.
 
 ##  Data structures implemented
-* [Heaps](./DataStructure/Heap.py)
-* [Queue](./DataStructure/Queue.py) with O(1) enqueue and O(1) dequeue operations
-* [Graph](./DataStructure/Graph.py): Ajacency list and Object-pointers representation
+* [Heaps](./DataStructures/Heap.py)
+* [Queue](./DataStructures/Queue.py) with O(1) enqueue and O(1) dequeue operations
+* [Graph](./DataStructures/Graph.py): Ajacency list and Object-pointers representation
 
 ## Algorithms implemented
 ### [Maths](./Algorithms/Maths.py)
