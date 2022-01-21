@@ -46,3 +46,25 @@ def dfs(graph: Graph, s_key = None, callback = None):
         traversal(graph[s_key])
     for v in graph:
         traversal(v)
+        
+def hasCycle(graph: Graph)->bool:
+    # time O(V+E), space O(V)
+    visited = set()
+    
+    def helper(v, parent):
+        nonlocal visited
+        visited.add(v.key)
+        for e in v.edges:
+            if e.tov.key not in visited: 
+                if helper(e.tov,v):
+                    return True
+            elif parent is not None and e.tov.key != parent.key:
+                return True
+        return False
+    for v in graph:
+        if v.key not in visited:
+            if helper(v, None) == True:
+                return True
+    return False
+    
+    

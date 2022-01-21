@@ -1,6 +1,6 @@
 
 # Graph: Object-pointers representation and Adjacency list representation
-# Space complexity: O (V+E) in non-directed graph and O(V+2E) in di-graphs
+# Space complexity: O (V+2E) in non-directed graph and O(V+E) in di-graphs
 # Time complexity: O(1) for insertion and deletion of vertices and edges
 
 class GraphNode:
@@ -21,13 +21,15 @@ class GraphNode:
             return False
         return self.__key == other.__key and self.__data == other.__data
         
-    def addEdge(self, dest, weight = 1):
-        #O(1)
-        e = GraphEdge(self,dest,weight)
+    def addEdge(self, dest, weight = 1, directed = True):
+        e = GraphEdge(self,dest,weight,directed)
         self.__edges.add(e)
-    def removeEdge(self, dest, weight = 1):
-        #O(1)
+        if directed == False:
+            dest.__edges.add(GraphEdge(dest,self,weight,directed))
+    def removeEdge(self, dest, weight = 1, directed = True):
         self.__edges.discard(GraphEdge(self,dest,weight))
+        if not(directed):
+            dest.__edges.discard(GraphEdge(dest,self,weight,directed))
         
     @property
     def edges(self):
@@ -41,12 +43,20 @@ class GraphNode:
     def key(self, k):
         self.__key = k
         
+    def hasEdge(self,dest):
+        return GraphEdge(self,dest) in self.__edges
+        
 class GraphEdge:
     
-    def __init__(self, start: GraphNode, end: GraphNode, weight = 1):
+    def __init__(self, start: GraphNode, end: GraphNode, weight = 1, directed = True):
         self.fromv = start
         self.tov = end
         self.weight = weight
+        self.__di = directed
+        
+    @property
+    def directed(self):
+        return self.__di
         
     def __hash__(self):
         return hash((self.fromv, self.tov))
@@ -81,10 +91,10 @@ class Graph:
     def printGraph(self):
         # O(V + E)
         for v in self:
-            print(v, end='')
+            print(v, end='--->(')
             for e in v.edges:
-                print('--->',e.tov, end='')
-            print()
+                print(e.tov, end=',')
+            print(')')
             
     @property
     def vertices(self):
