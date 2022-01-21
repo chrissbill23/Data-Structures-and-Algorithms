@@ -12,4 +12,5 @@ My implementations in Python of some Data Structures and Algorithms.
 * [Catalan numbers](https://brilliant.org/wiki/catalan-numbers/) O(n) in time and O(1) in space
 ### [Graph Algorithms](./Algorithms/GraphAlgorithms.py)
 * [BFS (Breadth First Search traversal)](https://en.wikipedia.org/wiki/Breadth-first_search) : with callback on the traversed node.
+* [DFS (Depth First Search traversal)](https://en.wikipedia.org/wiki/Depth-first_search) : with callback on the traversed node.
 
