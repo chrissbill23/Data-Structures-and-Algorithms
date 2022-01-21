@@ -11,7 +11,7 @@ class GraphNode:
         self.__edges = set()
         
     def __str__(self):
-        return '('+str(self.__key)+','+str(self.__data)+')'
+        return str(self.__key)
         
     def __hash__(self):
         return hash((self.__key,self.__data))
