@@ -19,6 +19,24 @@ if __name__ == "__main__":
     
     graph.printGraph()
     
-    bfs(graph, callback = lambda v: print(v,end = ' '))
+    bfs(graph, 2, callback = lambda v: print(v,end = ' '))
     print()
-    dfs(graph, callback = lambda v: print(v,end = ' '))
+    dfs(graph, 2, callback = lambda v: print(v,end = ' '))
+    print()
+    print(hasCycle(graph))
+    
+    
+    graph = Graph()
+    graph[0] = GraphNode(0)
+    graph[1] = GraphNode(1)
+    graph[2] = GraphNode(2)
+    graph[3] = GraphNode(3)
+    graph[9] = GraphNode(9)
+    
+    graph[0].addEdge(graph[1],directed = False)
+    graph[1].addEdge(graph[3],directed = False)
+    #graph[2].addEdge(graph[3],directed = False)
+    graph[2].addEdge(graph[0],directed = False)
+    graph.printGraph()
+    print(hasCycle(graph))
+    
