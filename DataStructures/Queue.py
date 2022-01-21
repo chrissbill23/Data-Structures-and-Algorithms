@@ -35,26 +35,4 @@ class Queue:
     def __repr__(self):
         return self.__str__()    
     
-'''if __name__ == "__main__":
-    q = Queue(["a", "b", "c"])
-    print(q, len(q))
-    
-    q = Queue()
-    print(q, len(q))
-    
-    q.append('a')
-    print(q, len(q))
-    q.append('b')
-    print(q, len(q))
-    q.append('c')
-    print(q, len(q))
-    q.pop()
-    print(q, len(q))
-    q.pop()
-    print(q, len(q))
-    q.pop()
-    print(q, len(q))
-    print(q.isEmpty())
-    q.append('a')
-    print(q, len(q))
-  '''
+

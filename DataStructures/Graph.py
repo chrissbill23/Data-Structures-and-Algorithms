@@ -124,25 +124,4 @@ class Graph:
             v.key = key
         self.__nodes[key] = v
             
-'''           
-if __name__ == "__main__":
-    vertices =[GraphNode(0), GraphNode(1), GraphNode(2)]
-    graph = Graph(vertices)
-    graph.printGraph()
-    print(graph)
-    vertices[0].addEdge(vertices[2])
-    vertices[2].addEdge(vertices[1])
-    graph.printGraph()
-    
-    graph.addNode(GraphNode(3))
-    print(graph)
-    print(4 in graph)
-    print(vertices[2] in graph)
-    print(len(graph))
-    graph[5] = GraphNode(5)
-    print(5 in graph)
-    
-    vertices[0].removeEdge(vertices[2])
-    graph.printGraph()
-    
-'''
+

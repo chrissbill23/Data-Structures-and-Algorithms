@@ -86,22 +86,3 @@ class MaxHeap(Heap):
         nodes = self.getNodes()
         return nodes[mainindex] > nodes[otherindex]
     
-            
-'''if __name__ == "__main__":
-    
-    obj = MinHeap()
-    obj.addNode(10); obj.addNode(15); obj.addNode(20); obj.addNode(17); obj.addNode(25); obj.addNode(5)
-    #obj.peek()
-    #obj.removeNode(1)
-    print (obj)
-    print (obj.getNodes())
-    
-    obj = MaxHeap()
-    obj.addNode(10); obj.addNode(15); obj.addNode(20); obj.addNode(17); obj.addNode(25); obj.addNode(5)
-    #obj.peek()
-    #obj.removeNode(1)
-    print (obj)
-    print (obj.getNodes())
- '''
-            
-    
