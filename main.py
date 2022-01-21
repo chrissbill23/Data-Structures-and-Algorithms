@@ -8,6 +8,7 @@ if __name__ == "__main__":
     graph[1] = GraphNode(1)
     graph[2] = GraphNode(2)
     graph[3] = GraphNode(3)
+    graph[9] = GraphNode(9)
     
     graph[0].addEdge(graph[1])
     graph[0].addEdge(graph[2])
@@ -18,4 +19,6 @@ if __name__ == "__main__":
     
     graph.printGraph()
     
-    bfs(graph, 2, callback = lambda v: print(v,end = ' '))
+    bfs(graph, callback = lambda v: print(v,end = ' '))
+    print()
+    dfs(graph, callback = lambda v: print(v,end = ' '))
