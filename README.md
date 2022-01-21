@@ -4,6 +4,7 @@ My implementations in Python of some Data Structures and Algorithms.
 ##  Data structures implemented
 * Heaps
 * Queue with O(1) enqueue and O(1) dequeue operations
+* [Graph](./Graph.py)
 
 ## Algorithms implemented
 * [Binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient) O(n) in time, O(1) in space
