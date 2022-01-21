@@ -13,4 +13,4 @@ My implementations in Python of some Data Structures and Algorithms.
 ### [Graph Algorithms](./Algorithms/GraphAlgorithms.py)
 * [BFS (Breadth First Search traversal)](https://en.wikipedia.org/wiki/Breadth-first_search) : with callback on the traversed node.
 * [DFS (Depth First Search traversal)](https://en.wikipedia.org/wiki/Depth-first_search) : with callback on the traversed node.
-
+* [Cycle detection](https://en.wikipedia.org/wiki/Cycle_(graph_theory)#:~:text=real%20numbers%2C%20etc.-,Cycle%20detection,over%20are%20part%20of%20cycles.) in directed and undirected graphs
