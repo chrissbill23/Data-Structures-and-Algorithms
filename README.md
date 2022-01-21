@@ -4,7 +4,7 @@ My implementations in Python of some Data Structures and Algorithms.
 ##  Data structures implemented
 * [Heaps](./Heap.py)
 * [Queue](./Queue.py) with O(1) enqueue and O(1) dequeue operations
-* [Graph](./Graph.py)
+* [Graph](./Graph.py): Ajacency list and Object-pointers representation
 
 ## Algorithms implemented
 ### [Maths](./Maths.py)
