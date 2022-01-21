@@ -83,7 +83,7 @@ class Graph:
         for v in self:
             print(v, end='')
             for e in v.edges:
-                print('--->',self.__nodes[e.tov], end='')
+                print('--->',e.tov, end='')
             print()
             
     @property
