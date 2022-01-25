@@ -3,7 +3,10 @@ My implementations in Python of some Data Structures and Algorithms.
 
 ##  Data structures implemented
 * [Heaps](./DataStructures/Heap.py)
+* [Priority Heaps](./DataStructures/Heap.py) same as the heaps but containing data if a form (key,value).
+* [N-ary Heaps](./DataStructures/Heap.py) are heaps where each node has at most n children. It is used when we want a smaller height of the tree in order to reduce the lookup time.
 * [Queue](./DataStructures/Queue.py) with O(1) enqueue and O(1) dequeue operations
+* [Priority Queue](./DataStructures/Queue.py) provided intervafe for concrete implementation like the priority heaps. It has multiple applications on CPU scheduling, Graphs algorithms, Data compression, etc.
 * [Graph](./DataStructures/Graph.py): Ajacency list and Object-pointers representation
 
 ## Algorithms implemented
