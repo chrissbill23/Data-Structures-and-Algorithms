@@ -40,3 +40,12 @@ if __name__ == "__main__":
     graph.printGraph()
     print(hasCycle(graph))
     
+    arr = [PriorityElement((1,1)),PriorityElement((2,2)),PriorityElement((3,3)),PriorityElement((4,4)),PriorityElement((5,5)),PriorityElement((6,6)),PriorityElement((7,7)),PriorityElement((8,8))]
+    heap = NAryMinHeap(3,arr)
+    print(heap.top())
+    print(heap.pop())
+    print(heap)
+    heap = MinHeap(arr)
+    print(heap)
+
+    
