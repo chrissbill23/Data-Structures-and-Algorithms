@@ -48,4 +48,14 @@ if __name__ == "__main__":
     heap = MinHeap(arr)
     print(heap)
 
-    
+    trie = Trie()
+    trie.insert('cat')
+    trie.insert('cats')
+    trie.insert('category')
+    trie.insert('airplane')
+    trie.insert('airivoire')
+    print(trie)
+    print(trie.search('caTegory'))
+    print(trie.search('airi'))
+    print(trie.startsWith('airi'))
+    print(trie.startsWith('aioi'))
